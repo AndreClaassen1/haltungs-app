@@ -1,0 +1,42 @@
+name: HaltungApp
+options:
+  bundleIdPrefix: de.andreclaassen
+  deploymentTarget:
+    macOS: "26.0"
+  createIntermediateGroups: true
+
+packages:
+  HaltungCore:
+    path: .
+
+targets:
+  HaltungApp:
+    type: application
+    platform: macOS
+    sources:
+      - path: HaltungApp
+    dependencies:
+      - package: HaltungCore
+        product: HaltungCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: de.andreclaassen.haltungs-app
+        SWIFT_VERSION: "6.0"
+        MACOSX_DEPLOYMENT_TARGET: "26.0"
+        ENABLE_HARDENED_RUNTIME: YES
+        SWIFT_STRICT_CONCURRENCY: complete
+        MARKETING_VERSION: "0.3.0"
+        CURRENT_PROJECT_VERSION: "1"
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: CV66WEKNLF
+    entitlements:
+      path: HaltungApp/HaltungApp.entitlements
+      properties:
+        com.apple.security.app-sandbox: false
+    info:
+      path: HaltungApp/Info.plist
+      properties:
+        LSUIElement: true
+        CFBundleShortVersionString: "$(MARKETING_VERSION)"
+        CFBundleVersion: "$(CURRENT_PROJECT_VERSION)"
+        NSHumanReadableCopyright: "© 2026 André Claaßen"

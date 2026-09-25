@@ -1,0 +1,10 @@
+# Dateien mit export-ignore gehen nicht in den GitHub-Spiegel (github-sync).
+# Fastlane haengt an den privaten Helfern in ~/Projects/swift/fastlane-common und
+# funktioniert ausserhalb dieses Rechners nicht; auf GitHub gilt der Bau per
+# xcodegen/xcodebuild aus der README.
+.gitlab-ci.yml export-ignore
+CLAUDE.md export-ignore
+.claude/ export-ignore
+fastlane/ export-ignore
+Gemfile export-ignore
+Gemfile.lock export-ignore

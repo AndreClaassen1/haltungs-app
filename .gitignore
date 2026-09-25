@@ -1,0 +1,32 @@
+# Xcode / XCGen
+*.xcodeproj
+!default.xcodeproj
+xcuserdata/
+*.xcworkspace/xcuserdata/
+DerivedData/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+
+# Builds & Artefakte
+build/
+*.app
+*.zip
+*.dSYM/
+
+# macOS
+.DS_Store
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output/
+
+# Secrets
+.env
+
+# Bundler (Standard: Lock nicht einchecken, siehe swift/CLAUDE.md)
+Gemfile.lock
